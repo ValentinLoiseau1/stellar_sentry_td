@@ -8,8 +8,8 @@ function redirigeVers($action)
         case "roadmap":
             $fichier = "roadmap.php";
             break;
-        case "blog":
-            $fichier = "blog.php";
+        case "blogAjout":
+            $fichier = "blogAjout.php";
             break;
         case "inscription":
             $fichier = "inscription.php";

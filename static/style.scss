@@ -1,23 +1,29 @@
-body{
+body {
+
     /* k2d-regular - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'K2D';
-    font-style: normal;
-    font-weight: 400;
-    src: url('/k2d-v11-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* k2d-500 - latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'K2D';
-    font-style: normal;
-    font-weight: 500;
-    src: url('fonts/k2d-v11-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
+    @font-face {
+        font-display: swap;
+        /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'K2D';
+        font-style: normal;
+        font-weight: 400;
+        src: url('/k2d-v11-latin-regular.woff2') format('woff2');
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+
+    /* k2d-500 - latin */
+    @font-face {
+        font-display: swap;
+        /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'K2D';
+        font-style: normal;
+        font-weight: 500;
+        src: url('fonts/k2d-v11-latin-500.woff2') format('woff2');
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
 }
 
-body{
+body {
     font-family: 'K2D';
     font-style: normal;
     font-weight: 500;
@@ -26,6 +32,7 @@ body{
     margin: 0;
     padding: 0;
 }
+
 // ------------------NAVIGATION---------------------------
 header {
     display: flex;
@@ -34,13 +41,15 @@ header {
     padding: 10px;
     background-color: #04031F;
 }
+
 .left-section img {
-    height: 150px; 
+    height: 150px;
     position: absolute;
-    top: 10px; 
-    left: 20px; 
-    z-index: 999; 
+    top: 10px;
+    left: 20px;
+    z-index: 999;
 }
+
 .main-nav ul,
 .right-nav ul {
     list-style-type: none;
@@ -50,15 +59,18 @@ header {
     padding: 10px;
     background-color: #04031F;
 }
-.main-nav ul{
+
+.main-nav ul {
     border: solid 1px #DBFF00;
     border-radius: 20px;
     padding: 8px 16px;
 }
-.right-nav{
+
+.right-nav {
     margin-left: 150px;
     margin-right: 30px;
 }
+
 .right-nav a {
     border: solid 1px #DBFF00;
     border-radius: 20px;
@@ -75,39 +87,45 @@ header {
 .right-nav ul li:last-child {
     margin-right: 0;
 }
+
 .main-nav a,
 .right-nav a {
     text-decoration: none;
     color: #1B5FD8;
 }
+
 .main-nav a:hover,
 .right-nav a:hover {
     color: #0095ff;
 }
+
 // ------------------VIDEO---------------------------
 .video-title {
     position: absolute;
-    top: 125px; 
-    left: 40%; 
-    transform: translateX(-50%); 
-    z-index: 999; 
-    color: white; 
+    top: 125px;
+    left: 40%;
+    transform: translateX(-50%);
+    z-index: 999;
+    color: white;
     font-size: 35px;
 }
-.video-content{
+
+.video-content {
     position: absolute;
     top: 225px;
-    left: 40%; 
-    transform: translateX(-50%); 
-    z-index: 999; 
-    color: white; 
-    font-size: 16px; 
+    left: 40%;
+    transform: translateX(-50%);
+    z-index: 999;
+    color: white;
+    font-size: 16px;
 }
+
 #background-video {
-    max-width: 100%; 
+    max-width: 100%;
     max-height: 100%;
-    z-index: -1; 
+    z-index: -1;
 }
+
 // ------------------MENU BURGER---------------------------
 #menu {
     z-index: 1;
@@ -186,13 +204,13 @@ header {
     padding-bottom: 10px;
 }
 
-.article-text h2{
+.article-text h2 {
     color: #1B5FD8;
 }
 
 /* ==============================FOOTER=========================================== */
 
-.bg-footer{
+.bg-footer {
     background-color: #04031F;
     padding: 20px 0;
     margin-top: 70px;
@@ -206,8 +224,10 @@ header {
 
 .footer-logo img {
     position: absolute;
-    transform: translate(-50%, -70%); /* Pour le centrer horizontalement et verticalement */
-    width: 125px; /* Ajuste la taille */
+    transform: translate(-50%, -70%);
+    /* Pour le centrer horizontalement et verticalement */
+    width: 125px;
+    /* Ajuste la taille */
     height: auto;
 }
 
@@ -217,7 +237,8 @@ header {
 }
 
 .footer-column {
-    flex-basis: 30%; /* Ajuste la largeur des colonnes */
+    flex-basis: 30%;
+    /* Ajuste la largeur des colonnes */
 }
 
 .footer-column h3 {
@@ -230,7 +251,8 @@ header {
 }
 
 .footer-column ul li a {
-    text-decoration: none; /* Supprime le soulignement des liens */
+    text-decoration: none;
+    /* Supprime le soulignement des liens */
     color: #fff;
 }
 
@@ -248,7 +270,7 @@ header {
     margin: 5px;
 }
 
-/* ====================================Formulaire========================== */
+/* ====================================FORMULAIRE========================== */
 
 .form-content article {
     display: flex;
@@ -260,9 +282,8 @@ header {
 .form-content input[type="text"],
 .form-content input[type="email"],
 .form-content input[type="password"],
-.form-content textarea{
+.form-content textarea {
     width: 100%;
-    max-width: 500px;
     max-height: 500px;
     padding: 10px;
     margin: 5px 0;
@@ -271,17 +292,18 @@ header {
     box-sizing: border-box;
 }
 
-.form-content textarea{
+.form-content textarea {
     height: 200px;
 }
 
-.form-content p{
+.form-content p {
     color: #fff;
 }
+
 .form-content p input::placeholder,
-.form-content p textarea::placeholder{
-    color:rgb(0, 0, 0);
-    opacity:1;
+.form-content p textarea::placeholder {
+    color: rgb(0, 0, 0);
+    opacity: 1;
 }
 
 .form-content .bouton {
@@ -325,12 +347,12 @@ header {
     padding: 20px;
 }
 
-.form-content div{
+.form-content div {
     color: rgb(206, 0, 0);
 }
 
 /* =============================BLOCK MISES A JOURS================================== */
-.news{
+.news {
     color: #fff;
     border: 1px solid #fff;
     border-radius: 10px;
@@ -338,115 +360,198 @@ header {
     padding-right: 10px;
 }
 
-/*=======================================MENTIONS LEGALES============================== */
-.mention-legale{
+/* ===========================================BLOCK BLOG============================ */
+.title-banner {
+    background-color: #04031F;
     color: #fff;
-    padding: 50px ;
+    text-align: center;
 }
 
-.mention-legale a{
+.title-banner h2 {
+    font-size: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 40px;
+    margin: 30px;
+}
+
+.comment {
+    width: calc(30% - 10px);
+    /* Pour afficher trois cartes par ligne */
+    border: 3px solid #007bff;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    font-weight: lighter;
+}
+
+.comment strong {
+
+    font-weight: bold;
+    color: #082656;
+}
+
+.comment p {
+    margin: 20px 0;
+}
+
+.comment {
+    font-weight: bold;
+}
+
+/*=======================================MENTIONS LEGALES============================== */
+.mention-legale {
+    color: #fff;
+    padding: 50px;
+}
+
+.mention-legale a {
     text-decoration: none;
     color: #1B5FD8;
 }
 
-.mention-legale h1{
+.mention-legale h1 {
     text-align: center;
     margin-top: 70px;
     margin-bottom: 70px;
 }
 
-.mention-legale h2{
+.mention-legale h2 {
     margin-top: 50px;
 }
+
 /* ==============================POLITIQUE DE CONFIDENTIALITE=========================== */
-.politique-conf{
+.politique-conf {
     color: #fff;
-    padding: 50px ;
+    padding: 50px;
 }
-.politique-conf h1{
+
+.politique-conf h1 {
     text-align: center;
     margin-top: 70px;
     margin-bottom: 70px;
 }
-.politique-conf h2{
+
+.politique-conf h2 {
     margin-top: 50px;
+}
+
+@media screen and (min-width: 599px) {
+    .comment {
+        width: 45%;
+    }
 }
 
 @media screen and (max-width: 599px) {
-    .article-text{
+    .article-text {
         font-size: 12px;
     }
+
     .articles-section {
         margin-left: 0;
     }
+
     .articles-section2 {
         margin-right: 0;
     }
+
     .form-content article {
         flex-direction: column;
         align-items: center;
     }
+
     .form-content img {
         max-width: 75%;
         margin-top: 10px;
         margin-bottom: 10px;
     }
-    .form-content h2{
+
+    .form-content h2 {
         margin-top: 70px;
     }
-    .form-content p{
+
+    .form-content p {
         margin: 20px;
+    }
+
+    .container {
+        display: block;
+    }
+
+    .comment {
+        width: 90%;
+        /* Pour afficher un seul commentaire par ligne sur les petits écrans */
+        margin: 10px;
     }
 }
 
 @media screen and (min-width: 799px) {
     .video-title {
-        top: 225px; 
-        left: 40%; 
+        top: 225px;
+        left: 40%;
     }
-    .video-content{
+
+    .video-content {
         top: 325px;
-        left: 40%; 
+        left: 40%;
     }
+
     .form-content img {
         max-width: 50%;
-        margin: 15px ;
+        margin: 15px;
         margin-bottom: 105px;
     }
-    .form-content p{
+
+    .form-content p {
         width: 90%;
         margin-left: 15px;
     }
-    .news{
+
+    .news {
         margin-left: 15px;
     }
+
 }
 
 @media screen and (max-width: 799px) {
     .articles-section {
         max-width: 100%;
     }
+
     .article-content {
         width: 100%;
     }
+
     .article-text {
         width: 100%;
     }
+
     .article-image {
         max-width: 40%;
     }
+
     .form-content img {
         max-width: 50%;
-        margin: 15px ;
+        margin: 15px;
         margin-bottom: 105px;
     }
-    .form-content p{
+
+    .form-content p {
         width: 90%;
         margin-left: 15px;
     }
-    .news{
+
+    .news {
         margin-left: 15px;
     }
+
 }
 
 @media screen and (max-width: 949px) {
@@ -513,45 +618,58 @@ header {
         opacity: 0;
         width: 0;
     }
-    .main-nav, .right-nav {
+
+    .main-nav,
+    .right-nav {
         display: none;
     }
 }
+
 @media screen and (min-width: 1099px) {
     .articles-section {
         max-width: 60%;
     }
-    .main-nav ul{
+
+    .main-nav ul {
         margin-right: 50px;
+    }
+    .comment {
+        width: 30%;
     }
 }
 
 @media screen and (min-width: 1199px) {
-    .article-text{
-    font-size: 20px;
+    .article-text {
+        font-size: 20px;
     }
+
     .video-title {
         font-size: 2rem;
     }
-    .video-content{
+
+    .video-content {
         font-size: 20px;
     }
-    .main-nav ul{
+
+    .main-nav ul {
         margin-right: 150px;
     }
-    .form-content p{
+
+    .form-content p {
         margin-left: 70px;
     }
+
     .form-content img {
         margin-right: 70px;
     }
-    .news{
+
+    .news {
         margin-left: 70px;
     }
 }
 
 @media screen and (min-width: 1399px) {
-    .main-nav ul{
+    .main-nav ul {
         margin-right: 400px;
     }
 }
@@ -560,13 +678,14 @@ header {
     .articles-section {
         max-height: 300px;
     }
-    .main-nav ul{
+
+    .main-nav ul {
         margin-right: 600px;
     }
 }
 
 @media screen and (min-width: 1799px) {
-    .main-nav ul{
+    .main-nav ul {
         margin-right: 750px;
     }
 }

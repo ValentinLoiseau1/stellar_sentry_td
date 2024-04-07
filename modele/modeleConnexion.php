@@ -25,12 +25,6 @@ function connexionUtilisateur($email, $mot_de_passe)
 
             // Utiliser crypt pour comparer le mot de passe fourni avec le mot de passe haché stocké
             if (crypt($mot_de_passe, $mot_de_passe_hache) === $mot_de_passe_hache) {
-                if (!isset($_SESSION)) {
-                    // Démarrer la session
-                    session_start();
-                }
-                // Stockage de la valeur dans $_SESSION 
-                $_SESSION['email'] = $_POST['email'];
                 return "Connexion réussie !";
             } else {
                 return "Mot de passe incorrect.";
@@ -44,13 +38,4 @@ function connexionUtilisateur($email, $mot_de_passe)
     } catch (PDOException $e) {
         return "Erreur : " . $e->getMessage();
     }
-}
-
-// Récupérez les données du formulaire
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST['email'];
-    $mot_de_passe = $_POST['mot_de_passe'];
-
-    // Appel de la fonction pour la connexion
-    $message = connexionUtilisateur($email, $mot_de_passe);
 }

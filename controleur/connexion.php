@@ -7,8 +7,6 @@ if ($_SERVER["SCRIPT_FILENAME"] == __FILE__) {
     die('Erreur : ' . basename(__FILE__));
 }
 
-// header ("Location: ?action=accueil"); 
-
 ?>
 <?php
 require "./modele/modeleConnexion.php";
@@ -20,7 +18,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $resultatConnexion = connexionUtilisateur($email, $mot_de_passe);
 
     if ($resultatConnexion == "Connexion réussie !") {
-        //Redirige vers l'accueil si le mot de passe est correct
+        if (!isset($_SESSION)) {
+            // Démarrer la session
+            session_start();
+        }
+        // Stockage de la valeur dans $_SESSION 
+        $_SESSION['email'] = $_POST['email'];
+         //Redirige vers l'accueil si le mot de passe est correct
         header("Location: ./?action=default");
     } else {
         //Redirige vers la page de connexion dans tout les autres cas

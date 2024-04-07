@@ -1,20 +1,25 @@
+@charset "UTF-8";
 body {
   /* k2d-regular - latin */
   /* k2d-500 - latin */
 }
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "K2D";
   font-style: normal;
   font-weight: 400;
-  src: url("/k2d-v11-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("/k2d-v11-latin-regular.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "K2D";
   font-style: normal;
   font-weight: 500;
-  src: url("fonts/k2d-v11-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("fonts/k2d-v11-latin-500.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 body {
@@ -213,8 +218,10 @@ header {
 
 .footer-logo img {
   position: absolute;
-  transform: translate(-50%, -70%); /* Pour le centrer horizontalement et verticalement */
-  width: 125px; /* Ajuste la taille */
+  transform: translate(-50%, -70%);
+  /* Pour le centrer horizontalement et verticalement */
+  width: 125px;
+  /* Ajuste la taille */
   height: auto;
 }
 
@@ -224,7 +231,8 @@ header {
 }
 
 .footer-column {
-  flex-basis: 30%; /* Ajuste la largeur des colonnes */
+  flex-basis: 30%;
+  /* Ajuste la largeur des colonnes */
 }
 
 .footer-column h3 {
@@ -237,7 +245,8 @@ header {
 }
 
 .footer-column ul li a {
-  text-decoration: none; /* Supprime le soulignement des liens */
+  text-decoration: none;
+  /* Supprime le soulignement des liens */
   color: #fff;
 }
 
@@ -255,7 +264,7 @@ header {
   margin: 5px;
 }
 
-/* ====================================Formulaire========================== */
+/* ====================================FORMULAIRE========================== */
 .form-content article {
   display: flex;
   flex-direction: row;
@@ -268,7 +277,6 @@ header {
 .form-content input[type=password],
 .form-content textarea {
   width: 100%;
-  max-width: 500px;
   max-height: 500px;
   padding: 10px;
   margin: 5px 0;
@@ -345,6 +353,51 @@ header {
   padding-right: 10px;
 }
 
+/* ===========================================BLOCK BLOG============================ */
+.title-banner {
+  background-color: #04031F;
+  color: #fff;
+  text-align: center;
+}
+
+.title-banner h2 {
+  font-size: 30px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 40px;
+  margin: 30px;
+}
+
+.comment {
+  width: calc(30% - 10px);
+  /* Pour afficher trois cartes par ligne */
+  border: 3px solid #007bff;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  font-weight: lighter;
+}
+
+.comment strong {
+  font-weight: bold;
+  color: #082656;
+}
+
+.comment p {
+  margin: 20px 0;
+}
+
+.comment {
+  font-weight: bold;
+}
+
 /*=======================================MENTIONS LEGALES============================== */
 .mention-legale {
   color: #fff;
@@ -382,6 +435,11 @@ header {
   margin-top: 50px;
 }
 
+@media screen and (min-width: 599px) {
+  .comment {
+    width: 45%;
+  }
+}
 @media screen and (max-width: 599px) {
   .article-text {
     font-size: 12px;
@@ -406,6 +464,14 @@ header {
   }
   .form-content p {
     margin: 20px;
+  }
+  .container {
+    display: block;
+  }
+  .comment {
+    width: 90%;
+    /* Pour afficher un seul commentaire par ligne sur les petits écrans */
+    margin: 10px;
   }
 }
 @media screen and (min-width: 799px) {
@@ -512,7 +578,8 @@ header {
     opacity: 0;
     width: 0;
   }
-  .main-nav, .right-nav {
+  .main-nav,
+  .right-nav {
     display: none;
   }
 }
@@ -522,6 +589,9 @@ header {
   }
   .main-nav ul {
     margin-right: 50px;
+  }
+  .comment {
+    width: 30%;
   }
 }
 @media screen and (min-width: 1199px) {
