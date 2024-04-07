@@ -20,6 +20,9 @@ function redirigeVers($action)
         case "deconnexion":
             $fichier = "deconnexion.php";
             break;
+        case "profil":
+            $fichier = "profil.php";
+            break;
         case "mentionsLegales":
             $fichier = "mentionsLegales.php";
             break;

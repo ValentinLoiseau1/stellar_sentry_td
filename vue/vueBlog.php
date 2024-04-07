@@ -37,7 +37,7 @@ include("vue/header.php");
 
         // Vérification s'il y a des commentaires à afficher
         if ($commentaires) {
-            // Boucle foreach pour parcourir chaque commentaire
+            //Affiche chaque commentaires stocker dans la base de donnée
             foreach ($commentaires as $commentaire) {
                 // Affichage du contenu du commentaire dans une div
                 echo "<div class='comment'>";

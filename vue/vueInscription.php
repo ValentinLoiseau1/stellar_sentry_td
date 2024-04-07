@@ -7,16 +7,16 @@
     <article>
         <form action="./?action=inscription" method="post">
             <p>
-                <label for="nom">Nom *</label>
-            </p>
-            <p>
-                <input type="text" name="nom" id="nom" placeholder="Nom" required>
-            </p>
-            <p>
                 <label for="prenom">Prenom *</label>
             </p>
             <p>
                 <input type="text" name="prenom" id="prenom" placeholder="Prénom" required>
+            </p>
+            <p>
+                <label for="nom">Nom *</label>
+            </p>
+            <p>
+                <input type="text" name="nom" id="nom" placeholder="Nom" required>
             </p>
             <p>
                 <label for="pseudo">Pseudo *</label>

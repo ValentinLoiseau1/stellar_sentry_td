@@ -344,6 +344,16 @@ header {
   color: rgb(206, 0, 0);
 }
 
+/* =============================MON PROFIL============================= */
+.profil h2 {
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
 /* =============================BLOCK MISES A JOURS================================== */
 .news {
   color: #fff;

@@ -7,8 +7,6 @@ if ($_SERVER["SCRIPT_FILENAME"] == __FILE__) {
     die('Erreur : '.basename(__FILE__));
 }
 
-// header ("Location: ?action=accueil"); 
-
 ?>
 <?php
     include ("vue/vueAccueil.php");
