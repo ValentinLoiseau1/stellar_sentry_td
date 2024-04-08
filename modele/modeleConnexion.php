@@ -9,7 +9,7 @@ function connexionUtilisateur($email, $mot_de_passe)
         $conn = connexionPDO();
 
         // Préparez la requête SQL pour récupérer le mot de passe haché
-        $sql = "SELECT password_ FROM _user WHERE email = :email";
+        $sql = "SELECT password_, id_user FROM _user WHERE email = :email";
         $stmt = $conn->prepare($sql);
 
         // Liaison des paramètres
@@ -22,10 +22,11 @@ function connexionUtilisateur($email, $mot_de_passe)
         if ($stmt->rowCount() > 0) {
             $row = $stmt->fetch();
             $mot_de_passe_hache = $row['password_'];
+            $idUser = $row['id_user'];
 
             // Utiliser crypt pour comparer le mot de passe fourni avec le mot de passe haché stocké
             if (crypt($mot_de_passe, $mot_de_passe_hache) === $mot_de_passe_hache) {
-                return "Connexion réussie !";
+                return $idUser;
             } else {
                 return "Mot de passe incorrect.";
             }

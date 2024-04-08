@@ -1,6 +1,6 @@
 <?php
 /*
-Controleur secondaire : profil
+Controleur secondaire : connexion
 */
 if ($_SERVER["SCRIPT_FILENAME"] == __FILE__) {
     // Un MVC utilise uniquement ses requêtes depuis le contrôleur principal : index.php
@@ -17,26 +17,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Appel de la fonction pour la connexion
     $resultatConnexion = connexionUtilisateur($email, $mot_de_passe);
 
-    if ($resultatConnexion == "Connexion réussie !") {
-        if (!isset($_SESSION)) {
-            // Démarrer la session
-            session_start();
-        }
-        // Stockage de la valeur dans $_SESSION 
-        $_SESSION['email'] = $_POST['email'];
-         //Redirige vers l'accueil si le mot de passe est correct
-        header("Location: ./?action=default");
-    } else {
+    if ($resultatConnexion == "Mot de passe incorrect." || $resultatConnexion == "Identifiant incorrect.") {
         //Redirige vers la page de connexion dans tout les autres cas
         if (!isset($_SESSION)) {
             // Démarrer la session
             session_start();
         }
         $_SESSION['msg'] = $resultatConnexion;
+    } else {
+        if (!isset($_SESSION)) {
+            // Démarrer la session
+            session_start();
+        }
+
+        // Stockage de la valeur dans $_SESSION 
+        $_SESSION['email'] = $_POST['email'];
+        $_SESSION['id_user'] = $resultatConnexion;
+
+        //Redirige vers l'accueil si le mot de passe est correct
+        header("Location: ./?action=default");
     }
 }
 ?>
 
 <?php
-    include("vue/vueConnexion.php");
+include("vue/vueConnexion.php");
 ?>

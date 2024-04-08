@@ -24,7 +24,7 @@
                 <button type="submit" class="bouton" id="monBouton">connexion</button>
             </p>
             <article class="news">
-                <h3>Les derniéres mises a jours :</h3>
+                <?php include ("vue/vueNews.php"); ?>
             </article>
         </form>
         <img src="static/img/connexion.png" alt="connexion">

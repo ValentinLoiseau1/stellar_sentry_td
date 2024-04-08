@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Appel de la fonction pour modifier le profil
     $resultatModification = modifierProfil($login, $password, $email, $name, $surname, $emailSession);
-var_dump($resultatModification);
+    
     // Gérer le résultat de la modification du profil
     if ($resultatModification == "Les données de l'utilisateur ont été mises à jour avec succès.") {
         // Rediriger vers la page de profil avec un message de succès
@@ -35,8 +35,6 @@ var_dump($resultatModification);
             // Démarrer la session
             session_start();
         }
-        // Stockage de la valeur dans $_SESSION 
-        $_SESSION['email'] = $_POST['email'];
         header("Location: ./?action=profil");
     } else {
         if (!isset($_SESSION)) {
