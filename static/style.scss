@@ -358,8 +358,27 @@ header {
     font-size: 30px;
     color: #fff;
     align-items: center;
-    padding-top: 40px;
+    padding-top: 70px;
     padding-bottom: 40px;
+}
+
+.profil-info{
+    background-color: #fff;
+    border: 3px solid #007bff;
+    border-radius: 4px;
+}
+
+.profil-container{
+    height: auto ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profil-info p{
+    color: #04031F;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 /* =============================BLOCK MISES A JOURS================================== */
@@ -415,6 +434,7 @@ header {
 
 .comment {
     font-weight: bold;
+    margin-bottom: 40px;
 }
 
 /*=======================================MENTIONS LEGALES============================== */
@@ -673,9 +693,15 @@ header {
     .form-content img {
         margin-right: 70px;
     }
+    .title-profil{
+        margin-left: 90px;
+    }
 
     .news {
         margin-left: 70px;
+    }
+    .profil-container .profil-info p{
+        margin-left: 20px;
     }
 }
 
