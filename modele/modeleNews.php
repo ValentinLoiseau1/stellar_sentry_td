@@ -1,6 +1,6 @@
 <?php
 // Inclure le fichier de connexion
-require("bd.inc.php");
+require_once("bd.inc.php");
 
 //Fonction récuperer tout les commentaires en base de donnée
 function recupererNews()

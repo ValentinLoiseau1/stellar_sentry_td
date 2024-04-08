@@ -386,8 +386,17 @@ header {
     color: #fff;
     border: 1px solid #fff;
     border-radius: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+}
+
+.form-content .news p{
+    margin-left: 0;
+}
+.form-content .news h2{
+    font-size: 20px;
+    padding-top: 20px; 
+    padding-bottom: 20px;
+    text-align: start;
 }
 
 /* ===========================================BLOCK BLOG============================ */
@@ -474,12 +483,6 @@ header {
     margin-top: 50px;
 }
 
-/* ==============================POLITIQUE DE CONFIDENTIALITE=========================== */
-
-
-
-/* ==============================POLITIQUE DE CONFIDENTIALITE=========================== */
-
 @media screen and (min-width: 599px) {
     .comment {
         width: 45%;
@@ -526,6 +529,10 @@ header {
         width: 90%;
         /* Pour afficher un seul commentaire par ligne sur les petits écrans */
         margin: 10px;
+    }
+
+    .news {
+        margin-right: 15px;
     }
 }
 

@@ -4,38 +4,11 @@
 require("bd.inc.php");
 
 // Fonction pour ajouter un commentaire
-function ajouterCommentaire($emailSession, $titre, $message)
+function ajouterCommentaire($idUser, $titre, $message)
 {
     try {
         // 1- Connexion à la base de données
         $conn = connexionPDO();
-
-        // 2- Récupération de id_user en fonction de l'email fourni par la session
-
-        //2.1 Définition de la requête SQL a éxécuter
-        $sqlUser = "SELECT id_user FROM _user WHERE email = :emailSession";
-        //2.2 Préparation de l'objet de connexion a la base de donnée utilisant la requête sql définie précedement
-        $stmtUser = $conn->prepare($sqlUser);
-
-        //2.3 Complete la requête SQL avec les données a injectés
-        $stmtUser->bindParam(':emailSession', $emailSession);
-
-        //2.4 Execution de la requête SQL
-        if ($stmtUser->execute()) {
-            //2.4.1 Récupération de la ligne de résultat de l'execution de la requête
-            $row = $stmtUser->fetch();
-            //2.4.2 Récupération de la colonne id_user de la ligne récupérer précedement
-            $idUser = $row['id_user'];
-        } else {
-            //2.4.3 Dans le cas ou on a une erreur SQL on remonte un message d'erreur
-            return "Erreur : " . $sqlUser . "<br>" . $stmtUser->errorInfo()[2];
-        }
-
-        // 2.5 Test si il y a bien un utilisateur
-        if ($idUser == NULL) {
-            //2.5.1 Dans le cas ou l'utilisateur n'existe pas on renvoie un message d'erreur
-            return "Erreur : l'utilisateur n'a pas été trouvé en base de données";
-        }
 
         //3-Sauvegarde du commentaire en base de données
 

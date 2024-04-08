@@ -1,6 +1,8 @@
 <?php
 // Inclure le fichier de connexion
-require("bd.inc.php");
+
+
+require_once("bd.inc.php");
 
 function inscriptionUtilisateur($nom, $prenom, $pseudo, $email, $mot_de_passe) {
     try {

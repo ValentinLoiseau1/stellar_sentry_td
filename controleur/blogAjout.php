@@ -9,7 +9,7 @@ if ($_SERVER["SCRIPT_FILENAME"] == __FILE__) {
 
 ?>
 <?php
-require "./modele/modeleBlog.php";
+require_once "./modele/modeleBlog.php";
 
 // Récupérez les données du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -23,12 +23,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         session_start();
     }
     //2 Ajouter un commentaire uniquement si un utilisateur est connécté
-    if(isset($_SESSION['email'])){
+    if(isset($_SESSION['id_user'])){
         //2.1 Récupération de l'email de session dans une variable
-        $emailSession = $_SESSION['email'];
+        $idUser = $_SESSION['id_user'];
 
          //2.2 Appel de la fonction pour ajouter le commentaire
-        $resultatAjout = ajouterCommentaire($emailSession, $titre, $message);
+        $resultatAjout = ajouterCommentaire($idUser, $titre, $message);
 
         //2.3 Traitement du résultat de l'ajout
         if($resultatAjout == "Avis ajouté avec succès !"){
