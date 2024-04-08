@@ -57,10 +57,13 @@ function ajouterCommentaire($emailSession, $titre, $message)
             return "Erreur : " . $sqlAjout . "<br>" . $stmtAjout->errorInfo()[2];
         }
 
-        // Fermez la connexion à la base de données
-        $conn = null;
     } catch (PDOException $e) {
-        return "Erreur : " . $e->getMessage();
+        return "Erreur lors de la connexion a la base donnée, veuillez contactez le support.";
+    } finally {
+        if (isset($conn)) {
+            $conn = null;
+        
+        }
     }
 }
 
@@ -90,8 +93,6 @@ function recupererCommentaires()
             //2.3.3 Dans le cas ou on a une erreur SQL on remonte un message d'erreur
             return "Erreur : " . $sqlComments . "<br>" . $stmtComments->errorInfo()[2];
         }
-        // Fermez la connexion à la base de données
-        $conn = null;
     } catch (PDOException $e) {
         return "Erreur lors de la connexion a la base donnée, veuillez contactez le support.";
     } finally {

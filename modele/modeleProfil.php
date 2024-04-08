@@ -29,7 +29,6 @@ function recupererProfil()
             //2.3.3 Dans le cas ou on a une erreur SQL on remonte un message d'erreur
             return "Erreur : " . $sqlProfil  . "<br>" . $stmtProfil->errorInfo()[2];
         }
-
     } catch (PDOException $e) {
         return "Erreur lors de la connexion a la base donnée, veuillez contactez le support.";
     } finally {
@@ -74,31 +73,31 @@ function modifierProfil($login, $mot_de_passe, $email, $name, $surname, $emailSe
             return "Erreur : l'utilisateur n'a pas été trouvé en base de données";
         }
 
-                // Vérifier la complexité du mot de passe
-                if (strlen($mot_de_passe) < 8) {
-                    return "Le mot de passe doit contenir au moins 8 caractères.";
-                }
-        
-                if (!preg_match("#[A-Z]+#", $mot_de_passe)) {
-                    return "Le mot de passe doit contenir au moins une lettre majuscule.";
-                }
-        
-                if (!preg_match("#[a-z]+#", $mot_de_passe)) {
-                    return "Le mot de passe doit contenir au moins une lettre minuscule.";
-                }
-        
-                if (!preg_match("#[0-9]+#", $mot_de_passe)) {
-                    return "Le mot de passe doit contenir au moins un chiffre.";
-                }
-        
-                if (!preg_match("/[\'^£$%&*()}{@#~?><>,|=_+!-]/", $mot_de_passe)) {
-                    return "Le mot de passe doit contenir au moins un caractère spécial.";
-                }
-                // Utiliser trim pour supprimer les espaces avant et après le mot de passe
-                $mot_de_passe = trim($mot_de_passe);
-        
-                // Utiliser crypt pour hacher le mot de passe
-                $mot_de_passe_hache = crypt($mot_de_passe, $mot_de_passe);
+        // Vérifier la complexité du mot de passe
+        if (strlen($mot_de_passe) < 8) {
+            return "Le mot de passe doit contenir au moins 8 caractères.";
+        }
+
+        if (!preg_match("#[A-Z]+#", $mot_de_passe)) {
+            return "Le mot de passe doit contenir au moins une lettre majuscule.";
+        }
+
+        if (!preg_match("#[a-z]+#", $mot_de_passe)) {
+            return "Le mot de passe doit contenir au moins une lettre minuscule.";
+        }
+
+        if (!preg_match("#[0-9]+#", $mot_de_passe)) {
+            return "Le mot de passe doit contenir au moins un chiffre.";
+        }
+
+        if (!preg_match("/[\'^£$%&*()}{@#~?><>,|=_+!-]/", $mot_de_passe)) {
+            return "Le mot de passe doit contenir au moins un caractère spécial.";
+        }
+        // Utiliser trim pour supprimer les espaces avant et après le mot de passe
+        $mot_de_passe = trim($mot_de_passe);
+
+        // Utiliser crypt pour hacher le mot de passe
+        $mot_de_passe_hache = crypt($mot_de_passe, $mot_de_passe);
 
         // Définition de la requête SQL pour mettre à jour les données de l'utilisateur
         $sqlModifierProfil = "UPDATE _user SET login_ = :login_, password_ = :password_, email = :email, name = :name, surname = :surname WHERE id_user = :id_user ";
@@ -119,7 +118,6 @@ function modifierProfil($login, $mot_de_passe, $email, $name, $surname, $emailSe
         } else {
             return "Erreur lors de la mise à jour des données de l'utilisateur : " . $stmtModifierProfil->errorInfo()[2]; // Gestion des erreurs SQL
         }
-
     } catch (PDOException $e) {
         return "Erreur lors de la connexion a la base donnée, veuillez contactez le support.";
     } finally {
