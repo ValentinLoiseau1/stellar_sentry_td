@@ -61,10 +61,13 @@ function inscriptionUtilisateur($nom, $prenom, $pseudo, $email, $mot_de_passe) {
         } else {
             return "Erreur lors de l'inscription.";
         }
-
-        // Fermez la connexion à la base de données
-        $conn = null;
     } catch (PDOException $e) {
-        return "Erreur : " . $e->getMessage();
+        return "Erreur lors de la connexion a la base donnée, veuillez contactez le support.";
+    } finally {
+        if (isset($conn)) {
+            $conn = null;
+        
+        }
     }
 }
+?>

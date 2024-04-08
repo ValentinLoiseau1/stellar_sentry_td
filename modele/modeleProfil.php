@@ -32,7 +32,12 @@ function recupererProfil()
         // Fermez la connexion à la base de données
         $conn = null;
     } catch (PDOException $e) {
-        return "Erreur : " . $e->getMessage();
+        return "Erreur lors de la connexion a la base donnée, veuillez contactez le support.";
+    } finally {
+        if (isset($conn)) {
+            $conn = null;
+        
+        }
     }
 }
 
@@ -69,8 +74,12 @@ function modifierProfil($login, $password, $email, $name, $surname)
         $conn = null;
 
     } catch (PDOException $e) {
+        return "Erreur lors de la connexion a la base donnée, veuillez contactez le support.";
+    } finally {
+        if (isset($conn)) {
+            $conn = null;
         
-        return "Erreur : " . $e->getMessage(); // Gestion des exceptions PDO
+        }
     }
 }
 ?>

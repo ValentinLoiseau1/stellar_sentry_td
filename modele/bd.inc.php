@@ -1,7 +1,7 @@
 <?php
 
 function connexionPDO() {
-    $login = "FeelBack";
+    $login = "FeelBackd";
     $mdp = "kercode23";
     $bd = "ss_td";
     $serveur = "localhost";
@@ -16,7 +16,7 @@ function connexionPDO() {
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         return $conn;
     } catch (PDOException $e) {
-        die("Erreur de connexion PDO : " . $e->getMessage());
+        throw $e;
     }
 }
 
