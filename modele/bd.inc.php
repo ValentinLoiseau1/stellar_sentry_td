@@ -1,7 +1,7 @@
 <?php
 
 function connexionPDO() {
-    $login = "FeelBackd";
+    $login = "FeelBack";
     $mdp = "kercode23";
     $bd = "ss_td";
     $serveur = "localhost";

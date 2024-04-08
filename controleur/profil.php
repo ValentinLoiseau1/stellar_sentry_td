@@ -18,9 +18,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['nom'];
     $surname = $_POST['prenom'];
 
-    // Appel de la fonction pour modifier le profil
-    $resultatModification = modifierProfil($login, $password, $email, $name, $surname);
+    //Démarage de la session si pas démarrer ( a confirmer)
+    if (!isset($_SESSION)) {
+        // Démarrer la session
+        session_start();
+    }
+    $emailSession = $_SESSION['email'];
 
+    // Appel de la fonction pour modifier le profil
+    $resultatModification = modifierProfil($login, $password, $email, $name, $surname, $emailSession);
+var_dump($resultatModification);
     // Gérer le résultat de la modification du profil
     if ($resultatModification == "Les données de l'utilisateur ont été mises à jour avec succès.") {
         // Rediriger vers la page de profil avec un message de succès
