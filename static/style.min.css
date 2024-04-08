@@ -438,6 +438,67 @@ header {
   margin-bottom: 40px;
 }
 
+/* =======================================ROADMAP================================== */
+.roadmap_item {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 70px;
+}
+
+.roadmap_item > div {
+  flex: 1 1 15%;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+
+.roadmap_item > div:last-child {
+  margin-right: 20px;
+}
+
+.roadmap_item > div:first-child {
+  margin-left: 20px;
+}
+
+.roadmap h2 {
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.image-container {
+  display: flex;
+}
+
+.image-item {
+  flex: 1;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.image-item img {
+  width: 60%;
+  height: auto;
+}
+
+.image-item p {
+  margin-top: 10px;
+  color: #ccc;
+}
+
+.team li a {
+  text-decoration: none;
+  list-style-type: none;
+  color: #fff;
+}
+
+.team li {
+  list-style-type: none;
+}
+
 /*=======================================MENTIONS LEGALES============================== */
 .mention-legale {
   color: #fff;

@@ -9,7 +9,7 @@ require_once "./modele/modeleNews.php";
     // Vérification s'il y a des commentaires à afficher
     if ($news) {
         //Affiche chaque commentaires stocker dans la base de donnée
-        echo "<h2 class>Les dernières mises à jour</h2>";
+        echo "<h2 class>Les dernières mises à jour :</h2>";
         foreach ($news as $new) {
             // Affichage du contenu du commentaire dans une div
             echo "<div>";

@@ -362,20 +362,20 @@ header {
     padding-bottom: 40px;
 }
 
-.profil-info{
+.profil-info {
     background-color: #fff;
     border: 3px solid #007bff;
     border-radius: 4px;
 }
 
-.profil-container{
-    height: auto ;
+.profil-container {
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.profil-info p{
+.profil-info p {
     color: #04031F;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -389,12 +389,13 @@ header {
     padding-left: 15px;
 }
 
-.form-content .news p{
+.form-content .news p {
     margin-left: 0;
 }
-.form-content .news h2{
+
+.form-content .news h2 {
     font-size: 20px;
-    padding-top: 20px; 
+    padding-top: 20px;
     padding-bottom: 20px;
     text-align: start;
 }
@@ -446,6 +447,65 @@ header {
     margin-bottom: 40px;
 }
 
+/* =======================================ROADMAP================================== */
+
+.roadmap_item {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
+}
+
+.roadmap_item>div {
+    flex: 1 1 calc(15%);
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+.roadmap_item>div:last-child {
+    margin-right: 20px;
+}
+
+.roadmap_item>div:first-child {
+    margin-left: 20px;
+}
+.roadmap h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.image-container {
+    display: flex;
+  }
+  
+  .image-item {
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+  }
+  
+  .image-item img {
+    width: 60%;
+    height: auto;
+  }
+  
+  .image-item p {
+    margin-top: 10px;
+    color: #ccc;
+  }
+
+  .team li a {
+    text-decoration: none;
+    list-style-type: none;
+    color: #fff;
+}
+.team li{
+    list-style-type: none;
+}
 /*=======================================MENTIONS LEGALES============================== */
 .mention-legale {
     color: #fff;
@@ -677,6 +737,7 @@ header {
     .main-nav ul {
         margin-right: 50px;
     }
+
     .comment {
         width: 30%;
     }
@@ -706,14 +767,16 @@ header {
     .form-content img {
         margin-right: 70px;
     }
-    .title-profil{
+
+    .title-profil {
         margin-left: 90px;
     }
 
     .news {
         margin-left: 70px;
     }
-    .profil-container .profil-info p{
+
+    .profil-container .profil-info p {
         margin-left: 20px;
     }
 }
