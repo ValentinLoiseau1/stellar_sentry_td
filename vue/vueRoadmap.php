@@ -6,10 +6,12 @@ include("vue/header.php");
 <?php
 require_once "./modele/modeleRoadmap.php";
 ?>
-<div class="roadmap">
-    <h2>Feuille de route :</h2>;
-    <article class="roadmap_item">
-
+<div class="roadmap-title">
+    <h2>Feuille de route :</h2>
+</div>
+<div class="main-content">
+    <!-- Contenu principal avec les cartes -->
+    <div class="roadmap">
         <?php
         // Récupération des commentaires
         $roadmapItems = recupererRoadmap();
@@ -17,14 +19,22 @@ require_once "./modele/modeleRoadmap.php";
         // Vérification s'il y a des commentaires à afficher
         if ($roadmapItems) {
             //Affiche chaque commentaires stocker dans la base de donnée
-
+            $count = 0;
             foreach ($roadmapItems as $roadmapItem) {
+                // Déterminer si c'est un élément de gauche ou de droite
+                $count++;
+                $class = ($count % 2 == 0) ? 'right' : 'left';
+
                 // Affichage du contenu du commentaire dans une div
-                echo "<div>";
-                echo "<p>" . $roadmapItem['version_'] . "</p>";
+                echo "<div class='roadmap_item'>";
+                echo "<div class='roadmap_content $class'>";
+                echo "<p class='roadmap-version'>" . $roadmapItem['version_'] . "</p>";
                 echo "<p>" . $roadmapItem['content'] . "</p>";
-                echo "<p>" . $roadmapItem['date_range'] . "</p>";
-                echo "<br>";
+                echo "<p class='roadmap-date'>" . $roadmapItem['date_range'] . "</p>";
+                echo "</div>";
+                echo "<div class='barre-horizontale'>
+                            <div class='rond'></div>
+                      </div>"; // Barre horizontale avec rond au milieu
                 echo "</div>";
             }
         } else {
@@ -32,7 +42,7 @@ require_once "./modele/modeleRoadmap.php";
             echo "Aucun commentaire trouvé.";
         }
         ?>
-    </article>
+    </div>
 </div>
 <section class="team">
     <div class="title-banner">

@@ -40,7 +40,6 @@ function ajouterCommentaire($idUser, $titre, $message)
     }
 }
 
-
 //Fonction récuperer tout les commentaires en base de donnée
 function recupererCommentaires()
 {

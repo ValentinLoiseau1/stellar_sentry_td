@@ -335,7 +335,7 @@ header {
 
 .form-content h2 {
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
     color: #fff;
     align-items: center;
     padding-top: 40px;
@@ -408,7 +408,7 @@ header {
 }
 
 .title-banner h2 {
-    font-size: 30px;
+    font-size: 25px;
     padding-top: 40px;
     padding-bottom: 40px;
 }
@@ -449,63 +449,99 @@ header {
 
 /* =======================================ROADMAP================================== */
 
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-right: 20%;
+}
+
+.roadmap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.roadmap-title{
+    color: #fff;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
 .roadmap_item {
     display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 70px;
-}
-
-.roadmap_item>div {
-    flex: 1 1 calc(15%);
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
-    padding: 20px;
-}
-
-.roadmap_item>div:last-child {
-    margin-right: 20px;
-}
-
-.roadmap_item>div:first-child {
-    margin-left: 20px;
-}
-.roadmap h2 {
-    text-align: center;
-    font-size: 30px;
-    color: #fff;
     align-items: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    text-align: center;
 }
 
-.image-container {
-    display: flex;
-  }
-  
-  .image-item {
-    flex: 1;
-    margin: 0 10px;
-    text-align: center;
-  }
-  
-  .image-item img {
-    width: 60%;
-    height: auto;
-  }
-  
-  .image-item p {
-    margin-top: 10px;
-    color: #ccc;
-  }
+.roadmap_content {
+    background-color: #082656;
+    padding: 20px;
+    color: #fff;
+}
 
-  .team li a {
+.roadmap-date,
+.roadmap-version {
+    color: #FF9900;
+}
+
+.barre-horizontale {
+    width: 5px;
+    height: 100%;
+    background-color: #1B5FD8;
+    position: absolute;
+    right: -10px; /* Ajustez la position selon vos besoins */
+    top: 0;
+    bottom: 0;
+}
+
+.rond {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    right: -5px; /* Ajustez la position selon vos besoins */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Style pour .roadmap_content à droite de la barre */
+.roadmap_content.right {
+    right: 0;
+    transform: translateX(110%);
+}
+
+/* Media Queries pour le rendu responsive */
+@media screen and (max-width: 768px) {
+    .roadmap_content.right {
+        right: 0;
+        transform: translateX(0%);
+        margin-right: 0;
+    }
+    .main-content{
+        margin-right: 0;
+    }
+}
+
+/* ======================================NOTRE EQUIPE================================== */
+
+.team li a {
     text-decoration: none;
     list-style-type: none;
     color: #fff;
 }
-.team li{
+
+.team li {
     list-style-type: none;
 }
+
 /*=======================================MENTIONS LEGALES============================== */
 .mention-legale {
     color: #fff;
@@ -676,7 +712,6 @@ header {
         height: 2px;
         opacity: 1;
         position: absolute;
-        transition: 0.3s ease-in-out;
     }
 
     #burger-menu span:before,
