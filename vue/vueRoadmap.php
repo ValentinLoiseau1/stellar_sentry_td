@@ -56,23 +56,20 @@ require_once "./modele/modeleApi.php";
             <p>Co-fondateur</p>
             <!-- Récupération des données et affichage de l'API de hugo -->
             <?php afficherDonneesHugo('https://sstd-external-api.onrender.com/1f853e60-13fd-4edf-b1fe-dac728f081c6'); ?>
-            <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></i></a></li>
         </div>
         <div class="image-item">
             <img src="./static/img/avatarKevin.png" onclick='toggleDataKevin()' alt="kevin Crouillére">
-            <p>Kevin Crouillére</p>
+            <p>Kévin Crouillére</p>
             <p>Co-fondateur</p>
             <!-- Récupération des données et affichage de l'API de hugo -->
             <?php afficherDonneesKevin('https://sstd-external-api.onrender.com/ee198a4e-482a-4e25-bf81-91b58c97dd5d'); ?>
-            <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></i></a></li>
         </div>
         <div class="image-item">
-            <img src="./static/img/avatarValentin.png"  onclick='toggleDataValentin()' alt="Valentin Loiseau">
+            <img src="./static/img/avatarValentin.png" onclick='toggleDataValentin()' alt="Valentin Loiseau">
             <p>Valentin Loiseau</p>
             <p>Developpeur-web</p>
             <!-- Récupération des données et affichage de l'API de hugo -->
             <?php afficherDonneesValentin('https://sstd-external-api.onrender.com/292b9436-5462-4e2d-87eb-bc355ceab56f'); ?>
-            <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></i></a></li>
         </div>
     </div>
 </section>

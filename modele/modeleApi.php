@@ -16,12 +16,12 @@ function afficherDonneesHugo($urlHugo)
         if (isset($dataHugo['name']) && isset($dataHugo['professionalTitle']) && isset($dataHugo['projectRole']) && isset($dataHugo['linkedinUrl']) && isset($dataHugo['experiences'])) {
             // Afficher les informations sur l'équipe avec une classe pour contrôler la visibilité
             echo "<div class='team-member' id='data-hugo' style='display: none;'>";
-            echo "<p>{$dataHugo['name']}</p>";
             echo "<p>{$dataHugo['professionalTitle']}</p>";
-            echo "<p>{$dataHugo['projectRole']}</p>";
+            echo"<br>";
             echo "<p><a href='{$dataHugo['linkedinUrl']}'>Profil LinkedIn</a></p>";
-            echo "<p>Expériences :</p>";
             echo "<ul>";
+            echo"<p>Expériences professionnelles :</p>";
+            echo"<br>";
             foreach ($dataHugo['experiences'] as $experienceHugo) {
                 echo "<li>{$experienceHugo['role']} chez {$experienceHugo['company']} ({$experienceHugo['duration']})</li>";
             }
@@ -54,12 +54,12 @@ function afficherDonneesKevin($urlKevin)
         if (isset($dataKevin['name']) && isset($dataKevin['professionalTitle']) && isset($dataKevin['projectRole']) && isset($dataKevin['linkedinUrl']) && isset($dataKevin['experiences'])) {
             // Afficher les informations sur l'équipe avec une classe pour contrôler la visibilité
             echo "<div class='team-member' id='data-kevin' style='display: none;'>";
-            echo "<p>{$dataKevin['name']}</p>";
             echo "<p>{$dataKevin['professionalTitle']}</p>";
-            echo "<p>{$dataKevin['projectRole']}</p>";
+            echo"<br>";
             echo "<p><a href='{$dataKevin['linkedinUrl']}'>Profil LinkedIn</a></p>";
-            echo "<p>Expériences :</p>";
             echo "<ul>";
+            echo"<p>Expériences professionnelles :</p>";
+            echo"<br>";
             foreach ($dataKevin['experiences'] as $experienceKevin) {
                 echo "<li>{$experienceKevin['role']} chez {$experienceKevin['company']} ({$experienceKevin['duration']})</li>";
             }
@@ -93,12 +93,12 @@ function afficherDonneesValentin($urlValentin)
         if (isset($dataValentin['name']) && isset($dataValentin['professionalTitle']) && isset($dataValentin['projectRole']) && isset($dataValentin['linkedinUrl']) && isset($dataValentin['experiences'])) {
             // Afficher les informations sur l'équipe avec une classe pour contrôler la visibilité
             echo "<div class='team-member' id='data-valentin' style='display: none;'>";
-            echo "<p>{$dataValentin['name']}</p>";
             echo "<p>{$dataValentin['professionalTitle']}</p>";
-            echo "<p>{$dataValentin['projectRole']}</p>";
+            echo"<br>";
             echo "<p><a href='{$dataValentin['linkedinUrl']}'>Profil LinkedIn</a></p>";
-            echo "<p>Expériences :</p>";
             echo "<ul>";
+            echo"<p>Expériences professionnelles :</p>";
+            echo"<br>";
             foreach ($dataValentin['experiences'] as $experienceValentin) {
                 echo "<li>{$experienceValentin['role']} chez {$experienceValentin['company']} ({$experienceValentin['duration']})</li>";
             }

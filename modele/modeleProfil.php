@@ -11,13 +11,13 @@ function recupererProfil()
         $conn = connexionPDO();
 
         // 2- Récupération de id_user en fonction de l'email fourni par la session
-        $email_utilisateur = $_SESSION['email'];
+        $idUser = $_SESSION['id_user'];
         //2.1 Définition de la requête SQL a éxécute
-        $sqlProfil = "SELECT login_, password_, email, name, surname FROM _user WHERE email = :email";
+        $sqlProfil = "SELECT login_, password_, email, name, surname FROM _user WHERE id_user = :id_user";
         //2.2 Préparation de l'objet de connexion a la base de donnée utilisant la requête sql définie précedement
         $stmtProfil  = $conn->prepare($sqlProfil);
 
-        $stmtProfil->bindParam(':email', $email_utilisateur);
+        $stmtProfil->bindParam(':id_user', $idUser);
 
         //2.3 Execution de la requête SQL
         if ($stmtProfil->execute()) {
@@ -39,7 +39,7 @@ function recupererProfil()
 }
 
 // Fonction pour mettre à jour les données de l'utilisateur
-function modifierProfil($login, $mot_de_passe, $email, $name, $surname, $emailSession)
+function modifierProfil($login, $mot_de_passe, $email, $name, $surname, $idUser)
 {
     try {
         // Connexion à la base de données
@@ -48,13 +48,13 @@ function modifierProfil($login, $mot_de_passe, $email, $name, $surname, $emailSe
         // 2- Récupération de id_user en fonction de l'email fourni par la session
 
         //2.1 Définition de la requête SQL a éxécuter
-        $sqlUser = "SELECT id_user FROM _user WHERE email = :emailSession";
+        $sqlUser = "SELECT id_user FROM _user WHERE id_user = :id_user";
 
         //2.2 Préparation de l'objet de connexion a la base de donnée utilisant la requête sql définie précedement
         $stmtUser = $conn->prepare($sqlUser);
 
         //2.3 Complete la requête SQL avec les données a injectés
-        $stmtUser->bindParam(':emailSession', $emailSession);
+        $stmtUser->bindParam(':id_user', $idUser);
 
         //2.4 Execution de la requête SQL
         if ($stmtUser->execute()) {
