@@ -31,6 +31,7 @@ body {
     background-color: #082656;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 // ------------------NAVIGATION---------------------------
@@ -225,9 +226,7 @@ header {
 .footer-logo img {
     position: absolute;
     transform: translate(-50%, -70%);
-    /* Pour le centrer horizontalement et verticalement */
     width: 125px;
-    /* Ajuste la taille */
     height: auto;
 }
 
@@ -238,7 +237,6 @@ header {
 
 .footer-column {
     flex-basis: 30%;
-    /* Ajuste la largeur des colonnes */
 }
 
 .footer-column h3 {
@@ -252,7 +250,6 @@ header {
 
 .footer-column ul li a {
     text-decoration: none;
-    /* Supprime le soulignement des liens */
     color: #fff;
 }
 
@@ -423,7 +420,6 @@ header {
 
 .comment {
     width: calc(30% - 10px);
-    /* Pour afficher trois cartes par ligne */
     border: 3px solid #007bff;
     border-radius: 4px;
     padding: 10px;
@@ -466,7 +462,7 @@ header {
 .roadmap-title{
     color: #fff;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 70px;
     margin-bottom: 40px;
     font-size: 18px;
 }
@@ -496,7 +492,7 @@ header {
     height: 100%;
     background-color: #1B5FD8;
     position: absolute;
-    right: -10px; /* Ajustez la position selon vos besoins */
+    right: 0px;
     top: 0;
     bottom: 0;
 }
@@ -507,27 +503,13 @@ header {
     border-radius: 50%;
     background-color: #fff;
     position: absolute;
-    right: -5px; /* Ajustez la position selon vos besoins */
+    right: -5px; 
     top: 50%;
     transform: translateY(-50%);
 }
 
-/* Style pour .roadmap_content à droite de la barre */
 .roadmap_content.right {
-    right: 0;
-    transform: translateX(110%);
-}
-
-/* Media Queries pour le rendu responsive */
-@media screen and (max-width: 768px) {
-    .roadmap_content.right {
-        right: 0;
-        transform: translateX(0%);
-        margin-right: 0;
-    }
-    .main-content{
-        margin-right: 0;
-    }
+    transform: translateX(105%);
 }
 
 /* ======================================NOTRE EQUIPE================================== */
@@ -540,6 +522,35 @@ header {
 
 .team li {
     list-style-type: none;
+}
+
+.team {
+    text-align: center;
+}
+
+.team p {
+    color: #fff;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.image-item {
+    flex: 0 0 calc(33.333% - 20px);
+    margin: 10px;
+    text-align: center;
+}
+
+.image-item img {
+    max-width: 50%;
+}
+
+.text {
+    margin-top: 10px;
 }
 
 /*=======================================MENTIONS LEGALES============================== */
@@ -577,6 +588,21 @@ header {
 
 .politique-conf h2 {
     margin-top: 50px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .roadmap_content.right {
+        right: 0;
+        transform: translateX(0%);
+        margin-right: 0;
+    }
+    .main-content{
+        margin-right: 0;
+    }
+    .image-item {
+        flex-basis: 100%;
+    }
 }
 
 @media screen and (min-width: 599px) {
