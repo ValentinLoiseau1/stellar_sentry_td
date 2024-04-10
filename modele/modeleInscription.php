@@ -49,6 +49,11 @@ function inscriptionUtilisateur($nom, $prenom, $pseudo, $email, $mot_de_passe) {
 
         $stmt = $conn->prepare($sql);
 
+        $pseudo = htmlspecialchars($pseudo);
+        $email = htmlspecialchars($email);
+        $nom = htmlspecialchars($nom);
+        $prenom = htmlspecialchars($prenom);
+
         // Liaison des paramètres
         $stmt->bindParam(':login_', $pseudo);
         $stmt->bindParam(':password_', $mot_de_passe_hache);

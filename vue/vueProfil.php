@@ -40,6 +40,9 @@ include("vue/header.php");
                 <button type="submit" class="bouton" id="monBouton">Envoyer</button>
             </p>
         </form>
+        <form action="./?action=profil" method="post">
+                <input type="submit" name="delete_button" value="Supprimer l'utilisateur">
+            </form>
         <div class="profil-container">
             <h2>Votre profil :</h2>
             <?php
