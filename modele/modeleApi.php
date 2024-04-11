@@ -1,41 +1,4 @@
 <?php
-function afficherDonneesHugo($urlHugo)
-{
-    // URL de l'API externe
-    $urlHugo = 'https://sstd-external-api.onrender.com/1f853e60-13fd-4edf-b1fe-dac728f081c6';
-
-    // Effectuer une requête GET
-    $responseHugo = file_get_contents($urlHugo);
-
-    // Vérifier si la requête a réussi
-    if ($responseHugo !== false) {
-        // Décoder les données JSON
-        $dataHugo = json_decode($responseHugo, true);
-
-        // Vérifier si les données sont bien présentes
-        if (isset($dataHugo['name']) && isset($dataHugo['professionalTitle']) && isset($dataHugo['projectRole']) && isset($dataHugo['linkedinUrl']) && isset($dataHugo['experiences'])) {
-            // Afficher les informations sur l'équipe avec une classe pour contrôler la visibilité
-            echo "<div class='team-member' id='data-hugo' style='display: none;'>";
-            echo "<p>{$dataHugo['professionalTitle']}</p>";
-            echo"<br>";
-            echo "<p><a href='{$dataHugo['linkedinUrl']}'>Profil LinkedIn</a></p>";
-            echo "<ul>";
-            echo"<p>Expériences professionnelles :</p>";
-            echo"<br>";
-            foreach ($dataHugo['experiences'] as $experienceHugo) {
-                echo "<li>{$experienceHugo['role']} chez {$experienceHugo['company']} ({$experienceHugo['duration']})</li>";
-            }
-            echo "</ul>";
-            echo "</div>";
-        } else {
-            // Gérer les erreurs si les données ne sont pas complètes
-            echo "Les données d'Hugo sont incomplètes.";
-        }
-    } else {
-        // Gérer les erreurs si la requête a échoué
-        echo "La requête a échoué.";
-    }
-}
 
 function afficherDonneesKevin($urlKevin)
 {

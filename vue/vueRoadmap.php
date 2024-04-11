@@ -51,11 +51,11 @@ require_once "./modele/modeleApi.php";
     </div>
     <div class="image-container">
         <div class="image-item">
-            <img src="./static/img/avatarHugo.png" onclick='toggleDataHugo()' alt="Hugo Buffet">
+        <img src="./static/img/avatarHugo.png" onclick='toggleDataHugo()' alt="Hugo Buffet">
             <p>Hugo buffet</p>
             <p>Co-fondateur</p>
             <!-- Récupération des données et affichage de l'API de hugo -->
-            <?php afficherDonneesHugo('https://sstd-external-api.onrender.com/1f853e60-13fd-4edf-b1fe-dac728f081c6'); ?>
+           <!--  <script>afficherDonneesHugo("https://sstd-external-api.onrender.com/1f853e60-13fd-4edf-b1fe-dac728f081c6");</script> -->
         </div>
         <div class="image-item">
             <img src="./static/img/avatarKevin.png" onclick='toggleDataKevin()' alt="kevin Crouillére">
@@ -73,7 +73,6 @@ require_once "./modele/modeleApi.php";
         </div>
     </div>
 </section>
-
 <?php
 include("vue/footer.php");
 ?>

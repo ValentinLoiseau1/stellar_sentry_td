@@ -37,12 +37,16 @@ include("vue/header.php");
                 <input type="password" name="mot_de_passe" id="mot_de_passe" placeholder="Mot de passe" required>
             </p>
             <p>
+                <label for="mot_de_passe_confirmation">Confirmez le nouveau mot de passe</label>
+            </p>
+            <p>
+                <input type="password" name="mot_de_passe_confirmation" id="mot_de_passe_confirmation" placeholder="Confirmez le mot de passe" required>
+            </p>
+            <?php include ("vue/vueMessageErreur.php"); ?>
+            <p>
                 <button type="submit" class="bouton" id="monBouton">Envoyer</button>
             </p>
         </form>
-        <form action="./?action=profil" method="post">
-                <input type="submit" name="delete_button" value="Supprimer l'utilisateur">
-            </form>
         <div class="profil-container">
             <h2>Votre profil :</h2>
             <?php
@@ -59,7 +63,6 @@ include("vue/header.php");
                     echo "<p><strong>Prénom:</strong> " . $profil['surname'] . "</p>";
                     echo "<p><strong>Pseudos: </strong>" . $profil['login_'] . "</p>";
                     echo "<p><strong>Email:</strong> " . $profil['email'] . "</p>";
-                    echo "<p><strong>Mot de passe:</strong> " . $profil['password_'] . "</p>";
                     echo "</div>";
                 }
             } else {

@@ -38,9 +38,16 @@ function recupererProfil()
     }
 }
 
+
+
 // Fonction pour mettre à jour les données de l'utilisateur
-function modifierProfil($login, $mot_de_passe, $email, $name, $surname, $idUser)
+function modifierProfil($login, $mot_de_passe, $mot_de_passe_confirmation, $email, $name, $surname, $idUser)
 {
+    // Vérifier si les mots de passe correspondent
+    if ($mot_de_passe !== $mot_de_passe_confirmation) {
+        return "Les mots de passe ne correspondent pas.";
+    }
+        
     try {
         // Connexion à la base de données
         $conn = connexionPDO();
@@ -117,41 +124,6 @@ function modifierProfil($login, $mot_de_passe, $email, $name, $surname, $idUser)
             return "Les données de l'utilisateur ont été mises à jour avec succès.";
         } else {
             return "Erreur lors de la mise à jour des données de l'utilisateur : " . $stmtModifierProfil->errorInfo()[2]; // Gestion des erreurs SQL
-        }
-    } catch (PDOException $e) {
-        return "Erreur lors de la connexion a la base donnée, veuillez contactez le support.";
-    } finally {
-        if (isset($conn)) {
-            $conn = null;
-        }
-    }
-}
-
-// Fonction pour supprimer l'utilisateur de toutes les tables
-function suppressionUtilisateur($idUser)
-{
-    try {
-        // Connexion à la base de données
-        $conn = connexionPDO();
-
-        // 2- Récupération de id_user fourni par la session
-
-        //Préparation de la requête SQL a écécuter
-        $sqlDelete = "DELETE FROM _update, comment, roadmap_item, _user WHERE id_user = :id_user";
-        //2.2 Préparation de l'objet de connexion a la base de donnée utilisant la requête sql définie précedement
-        $stmtDelete  = $conn->prepare($sqlDelete);
-
-        $stmtDelete->bindParam(':id_user', $idUser);
-
-        //2.3 Execution de la requête SQL
-        if ($stmtDelete->execute()) {
-            //2.3.1 Récupération de la ligne de résultat de l'execution de la requête
-            $rows = $stmtDelete->fetchAll();
-            //2.3.2 Envoie du résultat pour le traitement de la vue
-            return $rows;
-        } else {
-            //2.3.3 Dans le cas ou on a une erreur SQL on remonte un message d'erreur
-            return "Erreur : " . $sqlDelete  . "<br>" . $stmtDelete->errorInfo()[2];
         }
     } catch (PDOException $e) {
         return "Erreur lors de la connexion a la base donnée, veuillez contactez le support.";
