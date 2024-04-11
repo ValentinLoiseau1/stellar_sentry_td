@@ -5,7 +5,6 @@ include("vue/header.php");
 
 <?php
 require_once "./modele/modeleRoadmap.php";
-require_once "./modele/modeleApi.php";
 ?>
 <div class="roadmap-title">
     <h2>Feuille de route :</h2>
@@ -50,26 +49,20 @@ require_once "./modele/modeleApi.php";
         <h2>Notre équipe :</h2>
     </div>
     <div class="image-container">
-        <div class="image-item">
-        <img src="./static/img/avatarHugo.png" onclick='toggleDataHugo()' alt="Hugo Buffet">
+        <div id="block-1f853e60-13fd-4edf-b1fe-dac728f081c6" class="image-item">
+            <img src="./static/img/avatarHugo.png" onclick='toggleData("1f853e60-13fd-4edf-b1fe-dac728f081c6")' alt="Hugo Buffet">
             <p>Hugo buffet</p>
             <p>Co-fondateur</p>
-            <!-- Récupération des données et affichage de l'API de hugo -->
-           <!--  <script>afficherDonneesHugo("https://sstd-external-api.onrender.com/1f853e60-13fd-4edf-b1fe-dac728f081c6");</script> -->
         </div>
-        <div class="image-item">
-            <img src="./static/img/avatarKevin.png" onclick='toggleDataKevin()' alt="kevin Crouillére">
+        <div id="block-ee198a4e-482a-4e25-bf81-91b58c97dd5d" class="image-item">
+            <img src="./static/img/avatarKevin.png" onclick='toggleData("ee198a4e-482a-4e25-bf81-91b58c97dd5d")' alt="kevin Crouillére">
             <p>Kévin Crouillére</p>
             <p>Co-fondateur</p>
-            <!-- Récupération des données et affichage de l'API de hugo -->
-            <?php afficherDonneesKevin('https://sstd-external-api.onrender.com/ee198a4e-482a-4e25-bf81-91b58c97dd5d'); ?>
         </div>
-        <div class="image-item">
-            <img src="./static/img/avatarValentin.png" onclick='toggleDataValentin()' alt="Valentin Loiseau">
+        <div id="block-292b9436-5462-4e2d-87eb-bc355ceab56f" class="image-item">
+            <img src="./static/img/avatarValentin.png" onclick='toggleData("292b9436-5462-4e2d-87eb-bc355ceab56f")' alt="Valentin Loiseau">
             <p>Valentin Loiseau</p>
             <p>Developpeur-web</p>
-            <!-- Récupération des données et affichage de l'API de hugo -->
-            <?php afficherDonneesValentin('https://sstd-external-api.onrender.com/292b9436-5462-4e2d-87eb-bc355ceab56f'); ?>
         </div>
     </div>
 </section>

@@ -29,10 +29,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Démarrer la session
             session_start();
         }
-
         // Stockage de la valeur dans $_SESSION 
-        $_SESSION['email'] = $_POST['email'];
-        $_SESSION['id_user'] = $resultatConnexion;
+        $_SESSION['email'] = $resultatConnexion['email'];
+        $_SESSION['id_user'] = $resultatConnexion['id_user'];
+        $_SESSION['role'] = $resultatConnexion['role'];
 
         //Redirige vers l'accueil si le mot de passe est correct
         header("Location: ./?action=default");

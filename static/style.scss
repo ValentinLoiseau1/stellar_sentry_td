@@ -689,6 +689,9 @@ header {
     .news {
         margin-right: 15px;
     }
+    .footer-columns > .footer-column:nth-child(1){
+        display: none;
+    }
 }
 
 @media screen and (min-width: 799px) {
