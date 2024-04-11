@@ -586,6 +586,69 @@ header {
     text-decoration: underline;
 }
 
+.form-admin-container {
+    display: flex;
+    justify-content: space-around;
+}
+/* =====================================ADMIN========================================== */
+.form-admin {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-color: #082656;
+    border: 2px solid #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+}
+
+.form-admin p input::placeholder,
+.form-admin p textarea::placeholder {
+    color: rgb(0, 0, 0);
+    opacity: 1;
+}
+
+.form-admin h2 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.form-admin p {
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.form-admin label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-admin input[type="text"],
+.form-admin textarea {
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; 
+}
+
+
+.form-admin button {
+    padding: 10px 20px;
+    background-color: #04031F;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-admin button:hover {
+    background-color: #0056b3;
+}
 /*=======================================MENTIONS LEGALES============================== */
 .mention-legale {
     color: #fff;
@@ -754,6 +817,17 @@ header {
         margin-left: 15px;
     }
 
+    .form-admin-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .form-admin {
+        flex: none;
+        width: 90%;
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
 }
 
 @media screen and (max-width: 949px) {

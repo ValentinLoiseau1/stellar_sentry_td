@@ -44,6 +44,71 @@ require_once "./modele/modeleRoadmap.php";
         ?>
     </div>
 </div>
+<?php
+// Vérifier si $_SESSION['rike'] est défini
+if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') {
+
+    // Si la session est ouverte, afficher la section HTML
+?>
+    <section class="form-admin-container">
+        <div class="form-admin">
+            <h2>Ajouter une étape a la roadmap</h2>
+            <form action="#" method="post">
+                <p>
+                    <label for="version">Version</label>
+                </p>
+                <p>
+                    <input type="text" name="version" id="version" placeholder="Version" required>
+                </p>
+                <p>
+                    <label for="contenu">Contenu</label>
+                </p>
+                <p>
+                    <textarea name="contenu" id="contenu" placeholder="Contenu" required></textarea>
+                </p>
+                <p>
+                    <label for="date">Plage de dates</label>
+                </p>
+                <p>
+                    <textarea name="date" id="date" placeholder="Date" required></textarea>
+                </p>
+                <?php include("vue/vueMessageErreur.php"); ?>
+                <p>
+                    <button type="submit" class="bouton" id="monBouton">Envoyer</button>
+                </p>
+            </form>
+        </div>
+        <div class="form-admin">
+            <h2>Supprimer une étape de la roadmap</h2>
+            <form action="#" method="post">
+                <p>
+                    <label for="version">Version</label>
+                </p>
+                <p>
+                    <input type="text" name="version" id="version" placeholder="Version" required>
+                </p>
+                <p>
+                    <label for="contenu">Contenu</label>
+                </p>
+                <p>
+                    <textarea name="contenu" id="contenu" placeholder="Contenu" required></textarea>
+                </p>
+                <p>
+                    <label for="date">Plage de dates</label>
+                </p>
+                <p>
+                    <textarea name="date" id="date" placeholder="Date" required></textarea>
+                </p>
+                <?php include("vue/vueMessageErreur.php"); ?>
+                <p>
+                    <button type="submit" class="bouton" id="monBouton">Envoyer</button>
+                </p>
+            </form>
+        </div>
+    </section>
+<?php
+}
+?>
 <section class="team">
     <div class="title-banner">
         <h2>Notre équipe :</h2>
