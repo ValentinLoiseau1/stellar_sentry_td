@@ -25,6 +25,13 @@
                 <ul>
                     <li><a href="./?action=mentionsLegales">Mentions légales</a></li>
                     <li><a href="./?action=politiqueDeConfidentialite">Politique de confidentialité</a></li>
+                    <?php
+                    // Vérifier si $_SESSION['role'] est défini et égal à 'admin'
+                    if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') {
+                        // Afficher le lien vers la politique de confidentialité
+                        echo '<li><a href="./?action=administrateur">Menu administrateur</a></li>';
+                    }
+                    ?>
                 </ul>
             </div>
         </div>
@@ -34,4 +41,5 @@
     </section>
 </footer>
 </body>
+
 </html>

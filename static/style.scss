@@ -1,34 +1,37 @@
-body {
+$primary-color: #1B5FD8;
+$secondary-color: #0095ff;
+$background-color: #082656;
+$font-family: 'K2D', sans-serif;
+$font-size-base: 16px;
 
-    /* k2d-regular - latin */
-    @font-face {
-        font-display: swap;
-        /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-        font-family: 'K2D';
-        font-style: normal;
-        font-weight: 400;
-        src: url('/k2d-v11-latin-regular.woff2') format('woff2');
-        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-    }
-
-    /* k2d-500 - latin */
-    @font-face {
-        font-display: swap;
-        /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-        font-family: 'K2D';
-        font-style: normal;
-        font-weight: 500;
-        src: url('fonts/k2d-v11-latin-500.woff2') format('woff2');
-        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-    }
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'K2D';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/k2d-v11-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+
+/* k2d-500 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'K2D';
+    font-style: normal;
+    font-weight: 500;
+    src: url('fonts/k2d-v11-latin-500.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 
 body {
     font-family: 'K2D';
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    background-color: #082656;
+    background-color: $background-color;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -206,7 +209,7 @@ header {
 }
 
 .article-text h2 {
-    color: #1B5FD8;
+    color: $primary-color;
 }
 
 /* ==============================FOOTER=========================================== */
@@ -258,7 +261,7 @@ header {
 }
 
 .copyright {
-    background-color: #082656;
+    background-color: $background-color;
     color: #fff;
     text-align: center;
 }
@@ -314,11 +317,11 @@ header {
 }
 
 .form-content .bouton:hover {
-    background-color: #0095ff;
+    background-color: $secondary-color;
 }
 
 .form-content label a {
-    color: #007bff;
+    color: $secondary-color;
     text-decoration: none;
 }
 
@@ -361,7 +364,7 @@ header {
 
 .profil-info {
     background-color: #fff;
-    border: 3px solid #007bff;
+    border: 3px solid $secondary-color;
     border-radius: 4px;
 }
 
@@ -420,7 +423,7 @@ header {
 
 .comment {
     width: calc(30% - 10px);
-    border: 3px solid #007bff;
+    border: 3px solid $secondary-color;
     border-radius: 4px;
     padding: 10px;
     margin-bottom: 10px;
@@ -431,7 +434,7 @@ header {
 .comment strong {
 
     font-weight: bold;
-    color: #082656;
+    color: $background-color;
 }
 
 .comment p {
@@ -459,7 +462,7 @@ header {
     align-items: center;
 }
 
-.roadmap-title{
+.roadmap-title {
     color: #fff;
     text-align: center;
     margin-top: 70px;
@@ -477,7 +480,7 @@ header {
 }
 
 .roadmap_content {
-    background-color: #082656;
+    background-color: $background-color;
     padding: 20px;
     color: #fff;
 }
@@ -490,7 +493,7 @@ header {
 .barre-horizontale {
     width: 5px;
     height: 100%;
-    background-color: #1B5FD8;
+    background-color: $secondary-color;
     position: absolute;
     right: 0px;
     top: 0;
@@ -503,7 +506,7 @@ header {
     border-radius: 50%;
     background-color: #fff;
     position: absolute;
-    right: -5px; 
+    right: -5px;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -590,11 +593,12 @@ header {
     display: flex;
     justify-content: space-around;
 }
+
 /* =====================================ADMIN========================================== */
 .form-admin {
     margin-top: 100px;
     margin-bottom: 100px;
-    background-color: #082656;
+    background-color: $background-color;
     border: 2px solid #fff;
     padding: 20px;
     border-radius: 10px;
@@ -628,11 +632,11 @@ header {
 .form-admin textarea {
     width: 100%;
     padding: 10px;
-    color: #fff;
+    color: black;
     border: 1px solid #fff;
     border-radius: 5px;
     font-size: 16px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 
@@ -649,6 +653,7 @@ header {
 .form-admin button:hover {
     background-color: #0056b3;
 }
+
 /*=======================================MENTIONS LEGALES============================== */
 .mention-legale {
     color: #fff;
@@ -657,7 +662,7 @@ header {
 
 .mention-legale a {
     text-decoration: none;
-    color: #1B5FD8;
+    color: $primary-color;
 }
 
 .mention-legale h1 {
@@ -693,9 +698,11 @@ header {
         transform: translateX(0%);
         margin-right: 0;
     }
-    .main-content{
+
+    .main-content {
         margin-right: 0;
     }
+
     .image-item {
         flex-basis: 100%;
     }
@@ -752,9 +759,24 @@ header {
     .news {
         margin-right: 15px;
     }
-    .footer-columns > .footer-column:nth-child(1){
+
+    .footer-columns>.footer-column:nth-child(1) {
         display: none;
     }
+
+    .form-admin-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .form-admin {
+        flex: none;
+        width: 75%;
+        margin: 0 auto;
+        margin-top: 80px;
+        margin-bottom: 40px;
+    }
+
 }
 
 @media screen and (min-width: 799px) {
@@ -815,18 +837,6 @@ header {
 
     .news {
         margin-left: 15px;
-    }
-
-    .form-admin-container {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .form-admin {
-        flex: none;
-        width: 90%;
-        margin-bottom: 20px;
-        margin-left: 20px;
     }
 }
 

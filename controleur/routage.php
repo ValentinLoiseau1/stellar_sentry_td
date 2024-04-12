@@ -23,6 +23,9 @@ function redirigeVers($action)
         case "profil":
             $fichier = "profil.php";
             break;
+        case "administrateur":
+            $fichier = "administrateur.php";
+            break;
         case "mentionsLegales":
             $fichier = "mentionsLegales.php";
             break;
