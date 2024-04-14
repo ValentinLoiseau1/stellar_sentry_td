@@ -1,9 +1,9 @@
-// Fonction pour basculer l'affichage des données de Hugo lorsqu'on clique sur son image
+// Fonction pour basculer l'affichage des données du profil lorsqu'on clique sur son image
 function toggleData($idProfil) {
-    // Récupérer l'élément contenant les données de Hugo
+    // Récupérer l'élément contenant les données du profil
     let teamData = document.getElementById('data-' + $idProfil);
 
-    // Si l'élément n'existe pas, créer et afficher les données de Hugo
+    // Si l'élément n'existe pas, créer et afficher les données du profil
     if (!teamData) {
         afficherDonnees($idProfil);
     }
@@ -15,7 +15,7 @@ function toggleData($idProfil) {
     }
 }
 
-// Fonction pour afficher les données de l'API de Hugo
+// Fonction pour afficher les données de l'API du profil
 function afficherDonnees($idProfil) {
     // URL de l'API externe
     let url = "https://sstd-external-api.onrender.com/" + $idProfil;

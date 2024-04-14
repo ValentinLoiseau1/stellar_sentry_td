@@ -5,15 +5,14 @@ require("bd.inc.php");
 function connexionUtilisateur($email, $mot_de_passe)
 {
     try {
-        $arrayUser = [];
-        // Connexion à la base de données
+        //Connexion à la base de données
         $conn = connexionPDO();
 
-        // Préparez la requête SQL pour récupérer le mot de passe haché
+        //Préparation de la requête SQL
         $sql = "SELECT password_, id_user, role FROM _user WHERE email = :email";
         $stmt = $conn->prepare($sql);
 
-        // Liaison des paramètres
+        //Liaison des paramètres
         $stmt->bindParam(':email', $email);
 
         // Exécutez la requête SQL

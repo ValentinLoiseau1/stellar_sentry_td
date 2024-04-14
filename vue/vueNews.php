@@ -3,15 +3,15 @@ require_once "./modele/modeleNews.php";
 ?>
 <div>
     <?php
-    // Récupération des commentaires
+    // Récupération des mise a jour
     $news = recupererNews();
 
-    // Vérification s'il y a des commentaires à afficher
+    // Vérification s'il y a des mises a jours à afficher
     if ($news) {
-        //Affiche chaque commentaires stocker dans la base de donnée
+        //Affiche chaque mise a jour stocker dans la base de donnée
         echo "<h2 class>Les dernières mises à jour :</h2>";
         foreach ($news as $new) {
-            // Affichage du contenu du commentaire dans une div
+            // Affichage du contenu des mise a jour dans une div
             echo "<div>";
             echo "<p><strong>Date: </strong>" . $new['creation_date'] . "</p>";
             echo "<p><strong>Mise a jour : </strong> " . $new['content'] . "</p>";

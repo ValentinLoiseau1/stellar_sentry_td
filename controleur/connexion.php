@@ -14,11 +14,11 @@ require "./modele/modeleConnexion.php";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $mot_de_passe = $_POST['mot_de_passe'];
+
     // Appel de la fonction pour la connexion
     $resultatConnexion = connexionUtilisateur($email, $mot_de_passe);
 
     if ($resultatConnexion == "Mot de passe incorrect." || $resultatConnexion == "Identifiant incorrect.") {
-        //Redirige vers la page de connexion dans tout les autres cas
         if (!isset($_SESSION)) {
             // Démarrer la session
             session_start();

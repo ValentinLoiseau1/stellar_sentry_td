@@ -17,7 +17,7 @@
                     session_start();
                 }
                 // Vérifier si l'utilisateur est connecté
-                if (isset($_SESSION['email']) == true) {
+                if (isset($_SESSION['id_user'])  == true) {
                     // Si l'utilisateur est connecté, afficher le bouton de déconnexion et le bouton de profil
                     echo '<li><a href="./?action=deconnexion">Déconnexion</a></li>';
                     echo '<li><a href="./?action=profil">Mon Profil</a></li>';

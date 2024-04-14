@@ -16,22 +16,21 @@ if (!isset($_SESSION)) {
     <h2>Feuille de route :</h2>
 </div>
 <div class="main-content">
-    <!-- Contenu principal avec les cartes -->
     <div class="roadmap">
         <?php
-        // Récupération des commentaires
+        // Récupération des items de la roadmap
         $roadmapItems = recupererRoadmap();
 
-        // Vérification s'il y a des commentaires à afficher
+        // Vérification s'il y a des items de la roadmap à afficher
         if ($roadmapItems) {
-            //Affiche chaque commentaires stocker dans la base de donnée
+            //Affiche chaque items de la roadmap stocker dans la base de donnée
             $count = 0;
             foreach ($roadmapItems as $roadmapItem) {
                 // Déterminer si c'est un élément de gauche ou de droite
                 $count++;
                 $class = ($count % 2 == 0) ? 'right' : 'left';
 
-                // Affichage du contenu du commentaire dans une div
+                // Affichage du contenu des items de la roadmap dans des div
                 echo "<div class='roadmap_item'>";
                 echo "<div class='roadmap_content $class'>";
                 echo "<p class='roadmap-version'>" . $roadmapItem['version_'] . "</p>";
@@ -40,7 +39,7 @@ if (!isset($_SESSION)) {
                 echo "</div>";
                 echo "<div class='barre-horizontale'>
                             <div class='rond'></div>
-                      </div>"; // Barre horizontale avec rond au milieu
+                      </div>"; 
                 echo "</div>";
             }
         } else {

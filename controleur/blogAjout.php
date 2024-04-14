@@ -17,20 +17,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $titre = $_POST['titre'];
     $message = $_POST['message'];
 
-    //Démarage de la session si pas démarrer ( a confirmer)
+    //Démarage de la session si elle n'est pas démarrer
     if (!isset($_SESSION)) {
         // Démarrer la session
         session_start();
     }
-    //2 Ajouter un commentaire uniquement si un utilisateur est connécté
+
     if(isset($_SESSION['id_user'])){
-        //2.1 Récupération de l'email de session dans une variable
+        // Récupération de l'id_user de la session dans une variable
         $idUser = $_SESSION['id_user'];
 
-         //2.2 Appel de la fonction pour ajouter le commentaire
+        //Appel de la fonction pour ajouter le commentaire
         $resultatAjout = ajouterCommentaire($idUser, $titre, $message);
 
-        //2.3 Traitement du résultat de l'ajout
+        //Traitement du résultat de l'ajout
         if($resultatAjout == "Avis ajouté avec succès !"){
             header("Location: ./?action=blogAjout");
         } else {

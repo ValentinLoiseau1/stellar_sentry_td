@@ -14,7 +14,6 @@ $font-size-base: 16px;
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-/* k2d-500 - latin */
 @font-face {
     font-display: swap;
     /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -691,29 +690,6 @@ header {
     margin-top: 50px;
 }
 
-
-@media screen and (max-width: 768px) {
-    .roadmap_content.right {
-        right: 0;
-        transform: translateX(0%);
-        margin-right: 0;
-    }
-
-    .main-content {
-        margin-right: 0;
-    }
-
-    .image-item {
-        flex-basis: 100%;
-    }
-}
-
-@media screen and (min-width: 599px) {
-    .comment {
-        width: 45%;
-    }
-}
-
 @media screen and (max-width: 599px) {
     .article-text {
         font-size: 12px;
@@ -752,7 +728,6 @@ header {
 
     .comment {
         width: 90%;
-        /* Pour afficher un seul commentaire par ligne sur les petits écrans */
         margin: 10px;
     }
 
@@ -778,6 +753,31 @@ header {
     }
 
 }
+
+
+@media screen and (min-width: 599px) {
+    .comment {
+        width: 45%;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .roadmap_content.right {
+        right: 0;
+        transform: translateX(0%);
+        margin-right: 0;
+    }
+
+    .main-content {
+        margin-right: 0;
+    }
+
+    .image-item {
+        flex-basis: 100%;
+    }
+}
+
 
 @media screen and (min-width: 799px) {
     .video-title {
@@ -806,6 +806,7 @@ header {
     }
 
 }
+
 
 @media screen and (max-width: 799px) {
     .articles-section {

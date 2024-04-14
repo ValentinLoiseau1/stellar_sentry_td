@@ -50,14 +50,14 @@ include("vue/header.php");
         <div class="profil-container">
             <h2>Votre profil :</h2>
             <?php
-            // Récupération des commentaires
+            // Récupération du profil
             $profils = recupererProfil();
 
-            // Vérification s'il y a des commentaires à afficher
+            // Vérification si il y a un profil a afficher
             if ($profils) {
-                //Affiche chaque commentaires stocker dans la base de donnée
+                //Affiche chaque profil stocker dans la base de donnée
                 foreach ($profils as $profil) {
-                    // Affichage du contenu du commentaire dans une div
+                    // Affichage du contenu du profil dans une div
                     echo "<div class='profil-info'>";
                     echo "<p><strong>Nom:</strong> " . $profil['name'] . "</p>";
                     echo "<p><strong>Prénom:</strong> " . $profil['surname'] . "</p>";
@@ -66,7 +66,7 @@ include("vue/header.php");
                     echo "</div>";
                 }
             } else {
-                // Affichage d'un message si aucun commentaire n'est trouvé
+                // Affichage d'un message si aucunprofil n'est trouvé
                 echo "Aucun profil trouvé.";
             }
             ?>
