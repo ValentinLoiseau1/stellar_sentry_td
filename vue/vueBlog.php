@@ -5,7 +5,7 @@ include("vue/header.php");
 
 <?php
 // Vérifier si $_SESSION['email'] est défini
-if (isset($_SESSION['email'])) {
+if (isset($_SESSION['id_user'])) {
 
     // Si la session est ouverte, afficher la section HTML
 ?>
