@@ -1,11 +1,15 @@
-<?php 
-    include ("vue/head.php");
-    include ("vue/header.php");
+<?php
+include("vue/head.php");
+include("vue/header.php");
 ?>
 <main>
     <section>
-        <h1 class="video-title">Stellar Sentry TD</h1>
-        <p class="video-content">Solo et multijoueur tower defense</p>
+        <div class="centered-content">
+            <div class="bg-h1">
+                <h1 class="video-title">Stellar Sentry TD</h1>
+                <p class="video-content">Solo et multijoueur tower defense</p>
+            </div>
+        </div>
         <video autoplay muted loop id="background-video">
             <source src="static/video/nebula_blue.mp4" type="video/mp4">
         </video>
@@ -32,8 +36,8 @@
                     <h2>Rejouabilité infinie</h2>
                     <h3>Maitrisez les différentes combinaisons</h3>
                     <p>Avec des centaines de combinaisons de tourelles,
-                        des décisions stratégiques qui ont un impact sur 
-                        le cours du jeu  il n'y a pas deux jeux identiques 
+                        des décisions stratégiques qui ont un impact sur
+                        le cours du jeu il n'y a pas deux jeux identiques
                         sur Stellar Sentry TD. Chaque jeu nécessite une adaptation.
                     </p>
                 </div>
@@ -45,8 +49,8 @@
                 <div class="article-text">
                     <h2>Jeu casuel</h2>
                     <h3>Solo et coopération</h3>
-                    <p>Jouez à la campagne en solo ou en équipe de 2 à 4. 
-                        Affinez vos défenses. Défiez les robots IA de tout type,  
+                    <p>Jouez à la campagne en solo ou en équipe de 2 à 4.
+                        Affinez vos défenses. Défiez les robots IA de tout type,
                         afin de progresser dans le monde de Stellar Sentry TD.
                     </p>
                 </div>
@@ -56,5 +60,5 @@
 </main>
 
 <?php
-    include ("vue/footer.php");
+include("vue/footer.php");
 ?>

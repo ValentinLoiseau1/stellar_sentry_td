@@ -56,12 +56,12 @@ if (!isset($_SESSION)) {
     <div class="image-container">
         <div id="block-1f853e60-13fd-4edf-b1fe-dac728f081c6" class="image-item">
             <img src="./static/img/avatarHugo.png" onclick='toggleData("1f853e60-13fd-4edf-b1fe-dac728f081c6")' alt="Hugo Buffet">
-            <p>Hugo buffet</p>
+            <p>Hugo Buffet</p>
             <p>Co-fondateur</p>
         </div>
         <div id="block-ee198a4e-482a-4e25-bf81-91b58c97dd5d" class="image-item">
             <img src="./static/img/avatarKevin.png" onclick='toggleData("ee198a4e-482a-4e25-bf81-91b58c97dd5d")' alt="kevin Crouillére">
-            <p>Kévin Crouillére</p>
+            <p>Kévin Crouillère</p>
             <p>Co-fondateur</p>
         </div>
         <div id="block-292b9436-5462-4e2d-87eb-bc355ceab56f" class="image-item">
