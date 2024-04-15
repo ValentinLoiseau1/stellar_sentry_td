@@ -93,25 +93,6 @@ header {
   color: #0095ff;
 }
 
-/* .video-content {
-    position: absolute;
-    top: 225px;
-    left: 40%;
-    transform: translateX(-50%);
-    z-index: 999;
-    color: white;
-    font-size: 16px;
-}
-
-.video-title {
-    position: absolute;
-    top: 125px;
-    left: 40%;
-    transform: translateX(-50%);
-    z-index: 999;
-    color: white;
-    font-size: 35px;
-} */
 .centered-content {
   display: flex;
   justify-content: center; /* Centrer horizontalement */
