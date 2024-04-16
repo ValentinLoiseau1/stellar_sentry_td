@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: ./?action=connexion");
     } if ($resultatInscription == "L'adresse e-mail n'est pas valide.") {
             //Redirige vers la page connexion si l'inscription a réussie
-            $_SESSION['msg'] = $resultatInscription;;
+            $_SESSION['msg'] = $resultatInscription;
     } else {
         //Redirige vers la page de connexion dans tout les autres cas
         if (!isset($_SESSION)) {
