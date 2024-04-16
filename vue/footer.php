@@ -15,9 +15,9 @@
             <div class="footer-column">
                 <h3>Nous suivre :</h3>
                 <ul>
-                    <li><a href="https://discord.com/"><i class="fab fa-discord"></i> Discord</a></li>
-                    <li><a href="https://twitter.com/"><i class="fab fa-facebook-square"></i> Facebook</a></li>
-                    <li><a href="https://www.facebook.com/"><i class="fa-solid fa-xmark"></i> Twitter</a></li>
+                    <li><a href="https://discord.com/" target="_blank"><i class="fab fa-discord"></i> Discord</a></li>
+                    <li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i> Facebook</a></li>
+                    <li><a href="https://twitter.com/"target="_blank"><i class="fa-solid fa-xmark"></i> Twitter</a></li>
                 </ul>
             </div>
             <div class="footer-column">
