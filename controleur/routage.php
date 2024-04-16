@@ -32,6 +32,9 @@ function redirigeVers($action)
         case "politiqueDeConfidentialite":
             $fichier = "politiqueDeConfidentialite.php";
             break;
+        case "404":
+            $fichier = "404.php";
+            break;
         default:
             $fichier = "accueil.php";
             break;

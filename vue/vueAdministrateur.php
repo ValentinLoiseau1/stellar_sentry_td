@@ -2,7 +2,8 @@
 include("vue/head.php");
 include("vue/header.php");
 ?>
-
+<?php if ($_SESSION['role'] == 'admin') {
+    ?>
 <div class="profil-container">
 
     <?php
@@ -66,7 +67,12 @@ include("vue/header.php");
         </form>
     </div>
 </section>
-
+<?php
+} else {
+    // Si l'utilisateur n'est pas administrateur, inclure la page 404
+    include("vue404.php");
+}
+?>
 <?php
 include("vue/footer.php");
 ?>
