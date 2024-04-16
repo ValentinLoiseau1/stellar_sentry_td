@@ -49,7 +49,7 @@
             ?>
             <li><a href="./?action=accueil">Accueil</a></li>
             <li><a href="./?action=roadmap">Roadmap</a></li>
-            <li><a href="./?action=blog">Blog</a></li>
+            <li><a href="./?action=blogAjout">Blog</a></li>
         </ul>
     </div>
 </header>
