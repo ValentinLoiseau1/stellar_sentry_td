@@ -15,6 +15,10 @@ function ajouterCommentaire($idUser, $titre, $message)
                 VALUES (:title, :content, 0 , :id_user)";
         $stmtAjout = $conn->prepare($sqlAjout);
 
+        //Modifie les caractéres spéciaux a fin de sécuriser l'entrée en base des champs saisie
+        $titre = htmlspecialchars($titre);
+        $message = htmlspecialchars($message);
+
         //Liaison des paramètres
         $stmtAjout->bindParam(':title', $titre);
         $stmtAjout->bindParam(':content', $message);

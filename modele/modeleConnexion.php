@@ -11,7 +11,7 @@ function connexionUtilisateur($email, $mot_de_passe)
         //Préparation de la requête SQL
         $sql = "SELECT password_, id_user, role FROM _user WHERE email = :email";
         $stmt = $conn->prepare($sql);
-
+        
         //Liaison des paramètres
         $stmt->bindParam(':email', $email);
 
