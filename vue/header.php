@@ -39,7 +39,7 @@
                     // Démarrer la session
                     session_start();
                 }
-                if (isset($_SESSION['email']) == true) {
+                if (isset($_SESSION['id_user']) == true) {
                     echo '<li><a href="./?action=deconnexion">Déconnexion</a></li>';
                     echo '<li><a href="./?action=profil">Mon Profil</a></li>';
                 } else {
