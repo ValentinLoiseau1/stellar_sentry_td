@@ -27,7 +27,6 @@ function afficherLesRoadpmapItem()
     } finally {
         if (isset($conn)) {
             $conn = null;
-        
         }
     }
 }
@@ -61,7 +60,6 @@ function supprimerLesRoadpmapItem($idRoadmap)
     } finally {
         if (isset($conn)) {
             $conn = null;
-        
         }
     }
 }
@@ -76,6 +74,11 @@ function ajouterLesRoadpmapItem($version, $content, $date, $idUser)
         $sqlAjoutRoadmapItem =  $sql = "INSERT INTO roadmap_item (version_, content, date_range, id_user) VALUES (:version_, :content, :date_range, :id_user)";
         $stmtAjoutRoadmapItem = $conn->prepare($sql);
 
+        //Modifie les caractéres spéciaux a fin de sécuriser l'entrée en base des champs saisie
+        $version = htmlspecialchars($version);
+        $content = htmlspecialchars($content);
+        $date = htmlspecialchars($date);
+
         //Liaison des paramètres
         $stmtAjoutRoadmapItem->bindParam(':version_', $version);
         $stmtAjoutRoadmapItem->bindParam(':content', $content);
@@ -88,15 +91,12 @@ function ajouterLesRoadpmapItem($version, $content, $date, $idUser)
         } else {
             return "Erreur : " . $sqlAjoutRoadmapItem . "<br>" . $stmtAjoutRoadmapItem->errorInfo()[2];
         }
-
     } catch (PDOException $e) {
-        
+
         return "Erreur lors de la connexion a la base donnée, veuillez contactez le support." . $e->getMessage();
     } finally {
         if (isset($conn)) {
             $conn = null;
-        
         }
     }
 }
-
